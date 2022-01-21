@@ -1,0 +1,37 @@
+.about {
+  background-color: whitesmoke;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+
+  &_contents {
+    color: #0b3675;
+    color: black;
+
+    h1 {
+      font-size: 3.4375rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    a {
+      text-decoration: none;
+      background: inherit;
+      padding: 15px;
+      display: inline-block;
+      margin: 20px 0;
+      border: 2px solid black;
+      border-radius: 2px;
+      color: black;
+      position: absolute;
+      transition: 300ms ease-in-out;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 3px 6px #111;
+      }
+    }
+  }
+}

@@ -8,6 +8,14 @@
     padding: 0.3125rem 0; // 5px
     background: #6736dd;
 
+    .logo {
+      a {
+        span {
+          color: #fff;
+        }
+      }
+    }
+
     .menu_links {
       a {
         &:hover {
