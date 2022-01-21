@@ -1,0 +1,38 @@
+.hero {
+  max-width: 90%;
+  padding: 2em 3em;
+  color: #fff;
+  background: transparent;
+  text-align: justify;
+
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+
+  display: flex;
+
+  &_contents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+    span {
+      color: dodgerblue; // #12c3f7
+    }
+
+    .title {
+      font-size: 3.4375rem; // 55px
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: 0.125rem;
+    }
+  }
+}

@@ -13,3 +13,13 @@ body {
 a {
   text-decoration: none;
 }
+
+.container {
+  max-width: 93.75rem; // 1500px
+  padding: 0 3.125rem; // 50pxkk
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

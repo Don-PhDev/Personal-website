@@ -4,7 +4,7 @@ particlesJS(
   {
     particles: {
       number: {
-        value: 50,
+        value: 40,
         density: {
           enable: true,
           value_area: 800,
@@ -39,7 +39,7 @@ particlesJS(
         },
       },
       size: {
-        value: 8,
+        value: 9,
         random: true,
         anim: {
           enable: false,
@@ -53,13 +53,13 @@ particlesJS(
         distance: 175,
         color: "#ffffff",
         opacity: 0.3,
-        width: 3,
+        width: 4,
       },
       move: {
         enable: true,
-        speed: 3,
+        speed: 4,
         direction: "none",
-        random: false,
+        random: true,
         straight: false,
         out_mode: "out",
         attract: {
@@ -100,7 +100,7 @@ particlesJS(
           distance: 100,
         },
         push: {
-          particles_nb: 4,
+          particles_nb: 2,
         },
         remove: {
           particles_nb: 2,
@@ -119,7 +119,8 @@ particlesJS(
   }
 );
 
-const links = document.querySelector(".links").querySelectorAll("a");
+// hover navbar links - not used
+const links = document.querySelector(".menu_links").querySelectorAll("a");
 
 links.forEach((element) => {
   element.addEventListener("click", () => {
@@ -128,4 +129,31 @@ links.forEach((element) => {
     });
     element.classList.add("active");
   });
+});
+
+// fixed navbar with background color
+const navBar = document.querySelector(".navbar");
+
+window.onscroll = () => {
+  if (window.scrollY > 100) {
+    navBar.classList.add("scrolled");
+  } else {
+    navBar.classList.remove("scrolled");
+  }
+};
+
+// toggle menu_hamburger
+const menuHamburger = document
+  .querySelector(".menu_hamburger")
+  .querySelector("i");
+const menuLinks = document.querySelector(".menu_links");
+
+menuHamburger.addEventListener("click", () => {
+  if (menuLinks.classList.contains("active")) {
+    menuLinks.classList.remove("active");
+    menuHamburger.classList.remove("active");
+  } else {
+    menuLinks.classList.add("active");
+    menuHamburger.classList.add("active");
+  }
 });

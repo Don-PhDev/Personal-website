@@ -14,15 +14,9 @@ a {
   text-decoration: none;
 }
 
-.navbar {
-  background: #6736dd;
-  width: 100%;
-  position: fixed;
-  padding: 0.3125rem 0;
-}
-
-.navbar_contents {
+.container {
   max-width: 93.75rem;
+  padding: 0 3.125rem;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -35,27 +29,176 @@ a {
           justify-content: space-between;
 }
 
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 0.625rem;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.navbar.scrolled {
+  padding: 0.3125rem 0;
+  background: #6736dd;
+}
+
+.navbar.scrolled .menu_links a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
 .navbar_contents .logo a {
   color: #fff;
   font-size: 2.1875rem;
-  font-weight: 700;
+  font-weight: 800;
 }
 
-.navbar_contents .menu {
+.navbar_contents .logo a span {
+  color: dodgerblue;
+}
+
+.navbar_contents .menu_links {
   font-size: 0px;
 }
 
-.navbar_contents .menu li {
+.navbar_contents .menu_links li {
   list-style: none;
   display: inline-block;
+  position: relative;
 }
 
-.navbar_contents .menu li:not(:last-child) {
+.navbar_contents .menu_links li:not(:last-child) {
   margin-right: 25px;
 }
 
-.navbar_contents .menu li a {
+.navbar_contents .menu_links li a {
   color: #fff;
   font-size: 1.125rem;
+  font-weight: 600;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.navbar_contents .menu_links li a:hover {
+  color: dodgerblue;
+}
+
+.navbar_contents .menu_hamburger {
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 1058px) {
+  .container {
+    padding: 0 4.375rem;
+  }
+  .navbar_contents .menu_links {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background: #0b3675;
+    text-align: center;
+    padding: 6.25rem;
+    opacity: 0;
+    -webkit-transition: 500ms ease-in-out;
+    transition: 500ms ease-in-out;
+  }
+  .navbar_contents .menu_links li {
+    display: block;
+    -webkit-transition: background-color 300ms ease-in-out;
+    transition: background-color 300ms ease-in-out;
+  }
+  .navbar_contents .menu_links li:not(:last-child) {
+    margin: 1.25rem 0;
+  }
+  .navbar_contents .menu_links li a {
+    display: inline-block;
+    font-size: 1.5rem;
+  }
+  .navbar_contents .menu_links li a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  .navbar_contents .menu_links.active {
+    top: 0;
+    left: 0;
+    opacity: 1;
+  }
+  .navbar_contents .menu_hamburger {
+    display: block;
+    z-index: 999;
+  }
+  .navbar_contents .menu_hamburger i.active::before {
+    content: "\f00d";
+  }
+  .hero_contents .title {
+    font-size: 2.5rem;
+  }
+  .hero_contents .subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+.hero {
+  max-width: 90%;
+  padding: 2em 3em;
+  color: #fff;
+  background: transparent;
+  text-align: justify;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero_contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hero_contents span {
+  color: dodgerblue;
+}
+
+.hero_contents .title {
+  font-size: 3.4375rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.hero_contents .subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.125rem;
+}
+
+canvas {
+  display: block;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #0a043c;
+  z-index: -1000;
 }
 /*# sourceMappingURL=globals.css.map */

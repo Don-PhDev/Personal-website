@@ -1,31 +1,43 @@
 .navbar {
-  background: #6736dd;
-  width: 100%;
   position: fixed;
-  padding: 0.3125rem 0; // 5px
+  width: 100%;
+  padding: 0.625rem; // 10px
+  transition: 300ms ease-in-out;
+
+  &.scrolled {
+    padding: 0.3125rem 0; // 5px
+    background: #6736dd;
+
+    .menu_links {
+      a {
+        &:hover {
+          text-decoration: underline;
+          color: #fff;
+        }
+      }
+    }
+  }
 
   &_contents {
-    max-width: 93.75rem; // 1500px
-    margin: auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
     .logo {
       a {
         color: #fff;
         font-size: 2.1875rem; // 35px
-        font-weight: 700;
+        font-weight: 800;
+
+        span {
+          color: dodgerblue; //#12c3f7
+        }
       }
     }
 
-    .menu {
+    .menu_links {
       font-size: 0px; // to remove white space
 
       li {
         list-style: none;
         display: inline-block;
+        position: relative;
 
         &:not(:last-child) {
           margin-right: 25px;
@@ -34,7 +46,90 @@
         a {
           color: #fff;
           font-size: 1.125rem; // 18px
+          font-weight: 600;
+          transition: 300ms ease-in-out;
+
+          &:hover {
+            color: dodgerblue; // #12c3f7, #1c6dd0
+          }
         }
+      }
+    }
+
+    .menu_hamburger {
+      color: #fff;
+      font-size: 23px;
+      cursor: pointer;
+      display: none;
+    }
+  }
+}
+
+// MEDIA QUERIES
+@media (max-width: 1058px) {
+  .container {
+    padding: 0 4.375rem;
+  }
+
+  .navbar {
+    &_contents {
+      .menu_links {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background: #0b3675;
+        text-align: center;
+        padding: 6.25rem;
+        opacity: 0;
+        transition: 500ms ease-in-out;
+
+        li {
+          display: block;
+          transition: background-color 300ms ease-in-out;
+
+          &:not(:last-child) {
+            margin: 1.25rem 0; // 20px
+          }
+
+          a {
+            display: inline-block;
+            font-size: 1.5rem; // 24px
+
+            &:hover {
+              color: #fff;
+              text-decoration: underline;
+            }
+          }
+        }
+
+        &.active {
+          top: 0;
+          left: 0;
+          opacity: 1;
+        }
+      }
+
+      .menu_hamburger {
+        display: block;
+        z-index: 999;
+
+        i {
+          &.active::before {
+            content: "\f00d";
+          }
+        }
+      }
+    }
+  }
+
+  .hero {
+    &_contents {
+      .title {
+        font-size: 2.5rem;
+      }
+
+      .subtitle {
+        font-size: 1.5rem;
       }
     }
   }
