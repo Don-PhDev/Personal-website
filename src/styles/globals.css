@@ -294,8 +294,8 @@ a {
 .skills {
   height: 100vh;
   width: 100%;
-  background: #240c5c;
-  color: white;
+  background: #f0f0f0;
+  color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -337,7 +337,7 @@ a {
 }
 
 .skills_items:hover {
-  background: #5421ca;
+  background: #c8c8c8;
   -webkit-box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
           box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
   -webkit-transform: scale(1.03, 1.03);
@@ -356,7 +356,7 @@ a {
   height: 2px;
   margin-top: -30px;
   margin-bottom: 30px;
-  background: white;
+  background: black;
 }
 
 .skills_items .title span:hover {
@@ -374,15 +374,15 @@ a {
 .skills_items .skills_list li div {
   text-align: center;
   padding: 5px 2px;
-  border: 1px solid white;
+  border: 1px solid black;
   border-radius: 2px;
   -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
 }
 
 .skills_items .skills_list li div:hover {
-  background-color: white;
-  color: #240c5c;
+  background-color: #e4e4e4;
+  color: black;
   -webkit-transform: scale(1.08);
           transform: scale(1.08);
   -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.7);
@@ -420,5 +420,136 @@ a {
   width: 20px;
   height: 60px;
   padding: 0.5em;
+}
+
+.projects {
+  width: 100%;
+  height: 100vh;
+  background: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.projects_heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.projects_heading h1 {
+  font-size: 3.4375rem;
+  text-transform: uppercase;
+}
+
+.projects_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.projects_wrapper .project_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 50px 20px;
+  margin: 30px;
+  background: white;
+}
+
+.projects_wrapper .project_item a.project-box {
+  position: relative;
+  width: 400px;
+  padding: 15px;
+}
+
+.projects_wrapper .project_item a.project-box img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 2px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-box-shadow: 0px 4px 15px -1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 4px 15px -1px rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.projects_wrapper .project_item a.project-box img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0px 9px 18px 3px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 9px 18px 3px rgba(0, 0, 0, 0.5);
+}
+
+.projects_wrapper .project_item .project_link a {
+  display: inline-block;
+  margin-top: 30px;
+  color: white;
+  font-weight: 600;
+  background: #6736dd;
+  text-align: center;
+  padding: 13px;
+  border-radius: 2px;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.projects_wrapper .project_item .project_link a:first-child {
+  margin-right: 50px;
+}
+
+.projects_wrapper .project_item .project_link a:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 5px 7px #0a043c;
+          box-shadow: 5px 7px #0a043c;
+}
+
+.projects_wrapper .project_item .project_link a:active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-box-shadow: 0 0 #0a043c;
+          box-shadow: 0 0 #0a043c;
+}
+
+.projects_wrapper .project_item .project_link a i {
+  margin-right: 10px;
 }
 /*# sourceMappingURL=globals.css.map */
